@@ -1,4 +1,3 @@
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -13,59 +12,42 @@
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
+  body { background: #f0ede8; display: flex; justify-content: center; padding: 2rem 1rem; min-height: 100vh; }
+
   .az-wrap {
     font-family: 'Poppins', sans-serif !important;
     background: var(--az-cream);
     border-radius: 16px;
     overflow: hidden;
-    min-height: 480px;
+    width: 100%;
+    max-width: 680px;
+    height: fit-content;
   }
 
-  .az-wrap * {
-    font-family: 'Poppins', sans-serif !important;
-  }
+  .az-wrap * { font-family: 'Poppins', sans-serif !important; }
 
-  .az-header {
-    background: var(--az-dark);
-    padding: 2rem 2rem 1.5rem;
-  }
+  .az-header { background: var(--az-dark); padding: 2rem 2rem 1.5rem; }
 
   .az-logo {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--az-green);
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
+    font-size: 13px; font-weight: 500; color: var(--az-green);
+    letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;
   }
 
   .az-header h1 {
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--az-cream);
-    line-height: 1.4;
-    margin-bottom: 0.5rem;
+    font-size: 20px; font-weight: 500; color: var(--az-cream);
+    line-height: 1.4; margin-bottom: 0.5rem;
   }
 
-  .az-header p {
-    font-size: 13px;
-    color: rgba(252,248,242,0.6);
-    line-height: 1.6;
-  }
+  .az-header p { font-size: 13px; color: rgba(252,248,242,0.6); line-height: 1.6; }
 
   .az-progress-bar {
-    height: 3px;
-    background: rgba(252,248,242,0.15);
-    margin-top: 1.5rem;
-    border-radius: 2px;
-    overflow: hidden;
+    height: 3px; background: rgba(252,248,242,0.15);
+    margin-top: 1.5rem; border-radius: 2px; overflow: hidden;
   }
 
   .az-progress-fill {
-    height: 100%;
-    background: var(--az-green);
-    border-radius: 2px;
-    transition: width 0.4s ease;
+    height: 100%; background: var(--az-green);
+    border-radius: 2px; transition: width 0.4s ease;
   }
 
   .az-body { padding: 2rem; }
@@ -73,191 +55,103 @@
   .az-step.active { display: block; }
 
   .az-step-label {
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--az-dark-60);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 0.75rem;
+    font-size: 11px; font-weight: 500; color: var(--az-dark-60);
+    letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.75rem;
   }
 
   .az-question {
-    font-size: 17px;
-    font-weight: 500;
-    color: var(--az-dark);
-    line-height: 1.5;
-    margin-bottom: 1.75rem;
+    font-size: 17px; font-weight: 500; color: var(--az-dark);
+    line-height: 1.5; margin-bottom: 1.75rem;
   }
 
-  .az-options {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+  .az-options { display: flex; flex-direction: column; gap: 10px; }
 
   .az-option {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 14px 16px;
-    border: 1.5px solid var(--az-dark-15);
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    background: white;
+    display: flex; align-items: center; gap: 12px;
+    padding: 14px 16px; border: 1.5px solid var(--az-dark-15);
+    border-radius: 10px; cursor: pointer; transition: all 0.2s ease; background: white;
   }
 
   .az-option:hover { border-color: var(--az-dark); background: var(--az-cream); }
 
-  .az-option.selected {
-    border-color: var(--az-dark);
-    background: var(--az-dark);
-  }
+  .az-option.selected { border-color: var(--az-dark); background: var(--az-dark); }
 
   .az-option-dot {
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    border: 1.5px solid var(--az-dark-15);
-    flex-shrink: 0;
-    transition: all 0.2s;
-    background: transparent;
+    width: 18px; height: 18px; border-radius: 50%;
+    border: 1.5px solid var(--az-dark-15); flex-shrink: 0;
+    transition: all 0.2s; background: transparent;
   }
 
-  .az-option.selected .az-option-dot {
-    background: var(--az-green);
-    border-color: var(--az-green);
-  }
+  .az-option.selected .az-option-dot { background: var(--az-green); border-color: var(--az-green); }
 
-  .az-option-text {
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--az-dark);
-    line-height: 1.4;
-  }
-
+  .az-option-text { font-size: 14px; font-weight: 400; color: var(--az-dark); line-height: 1.4; }
   .az-option.selected .az-option-text { color: var(--az-cream); }
 
   .az-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 2rem;
+    display: flex; justify-content: space-between;
+    align-items: center; margin-top: 2rem;
   }
 
   .az-btn {
-    font-size: 14px;
-    font-weight: 500;
-    padding: 12px 24px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.2s;
+    font-size: 14px; font-weight: 500; padding: 12px 24px;
+    border-radius: 8px; cursor: pointer; transition: all 0.2s;
   }
 
   .az-btn-primary {
-    background: transparent;
-    color: var(--az-dark);
+    background: transparent; color: var(--az-dark);
     border: 2px solid var(--az-dark);
   }
 
   .az-btn-primary:hover:not(:disabled) {
-    background: var(--az-dark);
-    color: var(--az-green);
+    background: var(--az-dark); color: var(--az-green);
   }
 
   .az-btn-primary:disabled {
-    color: var(--az-dark-60);
-    border: 2px solid var(--az-dark-15);
-    cursor: not-allowed;
+    color: var(--az-dark-60); border: 2px solid var(--az-dark-15); cursor: not-allowed;
   }
 
-  .az-btn-ghost {
-    background: transparent;
-    color: var(--az-dark);
-    border: 2px solid var(--az-dark);
-  }
-
-  .az-btn-ghost:hover {
-    background: var(--az-dark);
-    color: var(--az-cream);
-  }
+  .az-btn-ghost { background: transparent; color: var(--az-dark); border: 2px solid var(--az-dark); }
+  .az-btn-ghost:hover { background: var(--az-dark); color: var(--az-cream); }
 
   .az-result { display: none; }
   .az-result.active { display: block; }
 
   .az-result-header {
-    background: var(--az-dark);
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-bottom: 1.25rem;
+    background: var(--az-dark); border-radius: 12px;
+    padding: 1.5rem; margin-bottom: 1.25rem;
   }
 
   .az-result-header p {
-    font-size: 12px;
-    color: var(--az-green);
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
+    font-size: 12px; color: var(--az-green); font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.5rem;
   }
 
-  .az-price-range {
-    font-size: 32px;
-    font-weight: 600;
-    color: var(--az-cream);
-    line-height: 1.2;
-  }
+  .az-price-range { font-size: 32px; font-weight: 600; color: var(--az-cream); line-height: 1.2; }
+  .az-price-sub { font-size: 13px; color: rgba(252,248,242,0.55); margin-top: 4px; }
 
-  .az-price-sub {
-    font-size: 13px;
-    color: rgba(252,248,242,0.55);
-    margin-top: 4px;
-  }
-
-  .az-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 1.25rem;
-  }
+  .az-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.25rem; }
 
   .az-tag {
-    font-size: 12px;
-    font-weight: 500;
-    padding: 5px 12px;
-    border-radius: 20px;
-    background: var(--az-blue);
-    color: var(--az-dark);
+    font-size: 12px; font-weight: 500; padding: 5px 12px;
+    border-radius: 20px; background: var(--az-blue); color: var(--az-dark);
   }
 
   .az-tag-green { background: var(--az-green); color: var(--az-dark); }
 
   .az-detail-block {
-    border: 1.5px solid var(--az-dark-15);
-    border-radius: 10px;
-    padding: 1.25rem;
-    margin-bottom: 1rem;
-    background: white;
+    border: 1.5px solid var(--az-dark-15); border-radius: 10px;
+    padding: 1.25rem; margin-bottom: 1rem; background: white;
   }
 
   .az-detail-block h3 {
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--az-dark-60);
-    margin-bottom: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+    font-size: 11px; font-weight: 500; color: var(--az-dark-60);
+    margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em;
   }
 
   .az-detail-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    font-size: 13px;
-    color: var(--az-dark);
-    padding: 6px 0;
-    border-bottom: 0.5px solid var(--az-dark-15);
-    gap: 12px;
+    display: flex; justify-content: space-between; align-items: flex-start;
+    font-size: 13px; color: var(--az-dark); padding: 6px 0;
+    border-bottom: 0.5px solid var(--az-dark-15); gap: 12px;
   }
 
   .az-detail-row:last-child { border-bottom: none; }
@@ -265,60 +159,30 @@
   .az-detail-row span:last-child { font-weight: 500; text-align: right; }
 
   .az-cta {
-    background: var(--az-green);
-    border-radius: 10px;
-    padding: 1.5rem;
-    text-align: center;
-    margin-top: 1.25rem;
+    background: var(--az-green); border-radius: 10px;
+    padding: 1.5rem; text-align: center; margin-top: 1.25rem;
   }
 
-  .az-cta p {
-    font-size: 13px;
-    color: var(--az-dark);
-    margin-bottom: 1rem;
-    line-height: 1.5;
-  }
+  .az-cta p { font-size: 13px; color: var(--az-dark); margin-bottom: 1rem; line-height: 1.5; }
 
   .az-btn-cta {
-    font-size: 14px;
-    font-weight: 500;
-    padding: 13px 28px;
-    border-radius: 8px;
-    cursor: pointer;
-    background: var(--az-dark);
-    color: var(--az-cream);
-    border: 2px solid var(--az-dark);
-    transition: all 0.2s;
-    display: inline-block;
+    font-size: 14px; font-weight: 500; padding: 13px 28px;
+    border-radius: 8px; cursor: pointer; background: var(--az-dark);
+    color: var(--az-cream); border: 2px solid var(--az-dark);
+    transition: all 0.2s; display: inline-block; text-decoration: none;
   }
 
-  .az-btn-cta:hover {
-    background: var(--az-cream);
-    color: var(--az-dark);
-  }
+  .az-btn-cta:hover { background: var(--az-cream); color: var(--az-dark); }
 
-  .az-restart {
-    text-align: center;
-    margin-top: 1.25rem;
-    padding-bottom: 0.5rem;
-  }
+  .az-restart { text-align: center; margin-top: 1.25rem; padding-bottom: 0.5rem; }
 
   .az-btn-restart {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--az-dark);
-    background: transparent;
-    border: 2px solid var(--az-dark);
-    border-radius: 8px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: all 0.2s;
+    font-size: 13px; font-weight: 500; color: var(--az-dark);
+    background: transparent; border: 2px solid var(--az-dark);
+    border-radius: 8px; padding: 10px 20px; cursor: pointer; transition: all 0.2s;
   }
 
-  .az-btn-restart:hover {
-    background: var(--az-dark);
-    color: var(--az-cream);
-  }
+  .az-btn-restart:hover { background: var(--az-dark); color: var(--az-cream); }
 </style>
 
 <div class="az-wrap">
@@ -438,7 +302,7 @@
       </div>
       <div class="az-cta">
         <p>Ces résultats vous parlent ? Parlons-en ensemble lors d'un échange de 30 minutes.</p>
-        <button class="az-btn-cta">Prendre rendez-vous</button>
+        <a class="az-btn-cta" href="https://calendly.com/wagner-charlotte-pro/appeldecouverte" target="_blank">Prendre rendez-vous</a>
       </div>
       <div class="az-restart">
         <button class="az-btn-restart" id="btn-restart">← Recommencer le questionnaire</button>
