@@ -12,7 +12,7 @@
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
-  body { background: #f0ede8; display: flex; justify-content: center; padding: 2rem 1rem; min-height: 100vh; }
+  body { background: #f0ede8; display: flex; justify-content: center; padding: 2rem 1rem; min-height: 100vh; font-family: 'Poppins', sans-serif; }
 
   .az-wrap {
     font-family: 'Poppins', sans-serif !important;
@@ -28,87 +28,48 @@
 
   .az-header { background: var(--az-dark); padding: 2rem 2rem 1.5rem; }
 
-  .az-logo {
-    font-size: 13px; font-weight: 500; color: var(--az-green);
-    letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;
-  }
+  .az-logo { font-size: 13px; font-weight: 500; color: var(--az-green); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem; }
 
-  .az-header h1 {
-    font-size: 20px; font-weight: 500; color: var(--az-cream);
-    line-height: 1.4; margin-bottom: 0.5rem;
-  }
+  .az-header h1 { font-size: 20px; font-weight: 500; color: var(--az-cream); line-height: 1.4; margin-bottom: 0.5rem; }
 
   .az-header p { font-size: 13px; color: rgba(252,248,242,0.6); line-height: 1.6; }
 
-  .az-progress-bar {
-    height: 3px; background: rgba(252,248,242,0.15);
-    margin-top: 1.5rem; border-radius: 2px; overflow: hidden;
-  }
+  .az-progress-bar { height: 3px; background: rgba(252,248,242,0.15); margin-top: 1.5rem; border-radius: 2px; overflow: hidden; }
 
-  .az-progress-fill {
-    height: 100%; background: var(--az-green);
-    border-radius: 2px; transition: width 0.4s ease;
-  }
+  .az-progress-fill { height: 100%; background: var(--az-green); border-radius: 2px; transition: width 0.4s ease; }
 
   .az-body { padding: 2rem; }
   .az-step { display: none; }
   .az-step.active { display: block; }
 
-  .az-step-label {
-    font-size: 11px; font-weight: 500; color: var(--az-dark-60);
-    letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.75rem;
-  }
+  .az-step-label { font-size: 11px; font-weight: 500; color: var(--az-dark-60); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.75rem; }
 
-  .az-question {
-    font-size: 17px; font-weight: 500; color: var(--az-dark);
-    line-height: 1.5; margin-bottom: 1.75rem;
-  }
+  .az-question { font-size: 17px; font-weight: 500; color: var(--az-dark); line-height: 1.5; margin-bottom: 1.75rem; }
 
   .az-options { display: flex; flex-direction: column; gap: 10px; }
 
-  .az-option {
-    display: flex; align-items: center; gap: 12px;
-    padding: 14px 16px; border: 1.5px solid var(--az-dark-15);
-    border-radius: 10px; cursor: pointer; transition: all 0.2s ease; background: white;
-  }
+  .az-option { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1.5px solid var(--az-dark-15); border-radius: 10px; cursor: pointer; transition: all 0.2s ease; background: white; }
 
   .az-option:hover { border-color: var(--az-dark); background: var(--az-cream); }
 
   .az-option.selected { border-color: var(--az-dark); background: var(--az-dark); }
 
-  .az-option-dot {
-    width: 18px; height: 18px; border-radius: 50%;
-    border: 1.5px solid var(--az-dark-15); flex-shrink: 0;
-    transition: all 0.2s; background: transparent;
-  }
+  .az-option-dot { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid var(--az-dark-15); flex-shrink: 0; transition: all 0.2s; background: transparent; }
 
   .az-option.selected .az-option-dot { background: var(--az-green); border-color: var(--az-green); }
 
   .az-option-text { font-size: 14px; font-weight: 400; color: var(--az-dark); line-height: 1.4; }
   .az-option.selected .az-option-text { color: var(--az-cream); }
 
-  .az-nav {
-    display: flex; justify-content: space-between;
-    align-items: center; margin-top: 2rem;
-  }
+  .az-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 2rem; }
 
-  .az-btn {
-    font-size: 14px; font-weight: 500; padding: 12px 24px;
-    border-radius: 8px; cursor: pointer; transition: all 0.2s;
-  }
+  .az-btn { font-size: 14px; font-weight: 500; padding: 12px 24px; border-radius: 8px; cursor: pointer; transition: all 0.2s; }
 
-  .az-btn-primary {
-    background: transparent; color: var(--az-dark);
-    border: 2px solid var(--az-dark);
-  }
+  .az-btn-primary { background: transparent; color: var(--az-dark); border: 2px solid var(--az-dark); }
 
-  .az-btn-primary:hover:not(:disabled) {
-    background: var(--az-dark); color: var(--az-green);
-  }
+  .az-btn-primary:hover:not(:disabled) { background: var(--az-dark); color: var(--az-green); }
 
-  .az-btn-primary:disabled {
-    color: var(--az-dark-60); border: 2px solid var(--az-dark-15); cursor: not-allowed;
-  }
+  .az-btn-primary:disabled { color: var(--az-dark-60); border: 2px solid var(--az-dark-15); cursor: not-allowed; }
 
   .az-btn-ghost { background: transparent; color: var(--az-dark); border: 2px solid var(--az-dark); }
   .az-btn-ghost:hover { background: var(--az-dark); color: var(--az-cream); }
@@ -116,71 +77,40 @@
   .az-result { display: none; }
   .az-result.active { display: block; }
 
-  .az-result-header {
-    background: var(--az-dark); border-radius: 12px;
-    padding: 1.5rem; margin-bottom: 1.25rem;
-  }
+  .az-result-header { background: var(--az-dark); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.25rem; }
 
-  .az-result-header p {
-    font-size: 12px; color: var(--az-green); font-weight: 500;
-    letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.5rem;
-  }
+  .az-result-header p { font-size: 12px; color: var(--az-green); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.5rem; }
 
   .az-price-range { font-size: 32px; font-weight: 600; color: var(--az-cream); line-height: 1.2; }
   .az-price-sub { font-size: 13px; color: rgba(252,248,242,0.55); margin-top: 4px; }
 
   .az-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.25rem; }
 
-  .az-tag {
-    font-size: 12px; font-weight: 500; padding: 5px 12px;
-    border-radius: 20px; background: var(--az-blue); color: var(--az-dark);
-  }
+  .az-tag { font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: 20px; background: var(--az-blue); color: var(--az-dark); }
 
   .az-tag-green { background: var(--az-green); color: var(--az-dark); }
 
-  .az-detail-block {
-    border: 1.5px solid var(--az-dark-15); border-radius: 10px;
-    padding: 1.25rem; margin-bottom: 1rem; background: white;
-  }
+  .az-detail-block { border: 1.5px solid var(--az-dark-15); border-radius: 10px; padding: 1.25rem; margin-bottom: 1rem; background: white; }
 
-  .az-detail-block h3 {
-    font-size: 11px; font-weight: 500; color: var(--az-dark-60);
-    margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em;
-  }
+  .az-detail-block h3 { font-size: 11px; font-weight: 500; color: var(--az-dark-60); margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; }
 
-  .az-detail-row {
-    display: flex; justify-content: space-between; align-items: flex-start;
-    font-size: 13px; color: var(--az-dark); padding: 6px 0;
-    border-bottom: 0.5px solid var(--az-dark-15); gap: 12px;
-  }
+  .az-detail-row { display: flex; justify-content: space-between; align-items: flex-start; font-size: 13px; color: var(--az-dark); padding: 6px 0; border-bottom: 0.5px solid var(--az-dark-15); gap: 12px; }
 
   .az-detail-row:last-child { border-bottom: none; }
   .az-detail-row span:first-child { color: var(--az-dark-60); flex-shrink: 0; }
   .az-detail-row span:last-child { font-weight: 500; text-align: right; }
 
-  .az-cta {
-    background: var(--az-green); border-radius: 10px;
-    padding: 1.5rem; text-align: center; margin-top: 1.25rem;
-  }
+  .az-cta { background: var(--az-green); border-radius: 10px; padding: 1.5rem; text-align: center; margin-top: 1.25rem; }
 
   .az-cta p { font-size: 13px; color: var(--az-dark); margin-bottom: 1rem; line-height: 1.5; }
 
-  .az-btn-cta {
-    font-size: 14px; font-weight: 500; padding: 13px 28px;
-    border-radius: 8px; cursor: pointer; background: var(--az-dark);
-    color: var(--az-cream); border: 2px solid var(--az-dark);
-    transition: all 0.2s; display: inline-block; text-decoration: none;
-  }
+  .az-btn-cta { font-size: 14px; font-weight: 500; padding: 13px 28px; border-radius: 8px; cursor: pointer; background: var(--az-dark); color: var(--az-cream); border: 2px solid var(--az-dark); transition: all 0.2s; display: inline-block; text-decoration: none; }
 
   .az-btn-cta:hover { background: var(--az-cream); color: var(--az-dark); }
 
   .az-restart { text-align: center; margin-top: 1.25rem; padding-bottom: 0.5rem; }
 
-  .az-btn-restart {
-    font-size: 13px; font-weight: 500; color: var(--az-dark);
-    background: transparent; border: 2px solid var(--az-dark);
-    border-radius: 8px; padding: 10px 20px; cursor: pointer; transition: all 0.2s;
-  }
+  .az-btn-restart { font-size: 13px; font-weight: 500; color: var(--az-dark); background: transparent; border: 2px solid var(--az-dark); border-radius: 8px; padding: 10px 20px; cursor: pointer; transition: all 0.2s; }
 
   .az-btn-restart:hover { background: var(--az-dark); color: var(--az-cream); }
 </style>
@@ -201,9 +131,9 @@
       <div class="az-step-label">Question 1 sur 8</div>
       <div class="az-question">Depuis combien de temps votre entreprise est-elle engagée ?</div>
       <div class="az-options">
-        <div class="az-option" data-q="0" data-v="0"><div class="az-option-dot"></div><div class="az-option-text">Moins d'un an — nous sommes en train de structurer notre démarche</div></div>
-        <div class="az-option" data-q="0" data-v="1"><div class="az-option-dot"></div><div class="az-option-text">1 à 3 ans — nous avons une démarche en place mais encore en évolution</div></div>
-        <div class="az-option" data-q="0" data-v="2"><div class="az-option-dot"></div><div class="az-option-text">Plus de 3 ans — l'engagement est ancré dans notre fonctionnement</div></div>
+        <div class="az-option" data-q="0" data-v="Moins d'un an"><div class="az-option-dot"></div><div class="az-option-text">Moins d'un an — nous sommes en train de structurer notre démarche</div></div>
+        <div class="az-option" data-q="0" data-v="1 à 3 ans"><div class="az-option-dot"></div><div class="az-option-text">1 à 3 ans — nous avons une démarche en place mais encore en évolution</div></div>
+        <div class="az-option" data-q="0" data-v="Plus de 3 ans"><div class="az-option-dot"></div><div class="az-option-text">Plus de 3 ans — l'engagement est ancré dans notre fonctionnement</div></div>
       </div>
     </div>
 
@@ -211,9 +141,9 @@
       <div class="az-step-label">Question 2 sur 8</div>
       <div class="az-question">Votre communication reflète-t-elle vraiment ce que vous faites en interne ?</div>
       <div class="az-options">
-        <div class="az-option" data-q="1" data-v="yes"><div class="az-option-dot"></div><div class="az-option-text">Oui, clairement</div></div>
-        <div class="az-option" data-q="1" data-v="no"><div class="az-option-dot"></div><div class="az-option-text">Pas vraiment</div></div>
-        <div class="az-option" data-q="1" data-v="dontknow"><div class="az-option-dot"></div><div class="az-option-text">Je ne sais pas</div></div>
+        <div class="az-option" data-q="1" data-v="Oui clairement"><div class="az-option-dot"></div><div class="az-option-text">Oui, clairement</div></div>
+        <div class="az-option" data-q="1" data-v="Pas vraiment"><div class="az-option-dot"></div><div class="az-option-text">Pas vraiment</div></div>
+        <div class="az-option" data-q="1" data-v="Je ne sais pas"><div class="az-option-dot"></div><div class="az-option-text">Je ne sais pas</div></div>
       </div>
     </div>
 
@@ -221,9 +151,9 @@
       <div class="az-step-label">Question 3 sur 8</div>
       <div class="az-question">Vos derniers recrutements ont-ils été difficiles ou décevants en qualité de profils ?</div>
       <div class="az-options">
-        <div class="az-option" data-q="2" data-v="yes"><div class="az-option-dot"></div><div class="az-option-text">Oui, nous avons du mal à attirer les bons profils</div></div>
-        <div class="az-option" data-q="2" data-v="no"><div class="az-option-dot"></div><div class="az-option-text">Non, le recrutement se passe bien</div></div>
-        <div class="az-option" data-q="2" data-v="na"><div class="az-option-dot"></div><div class="az-option-text">Nous ne recrutons pas en ce moment</div></div>
+        <div class="az-option" data-q="2" data-v="Oui difficile"><div class="az-option-dot"></div><div class="az-option-text">Oui, nous avons du mal à attirer les bons profils</div></div>
+        <div class="az-option" data-q="2" data-v="Non ça se passe bien"><div class="az-option-dot"></div><div class="az-option-text">Non, le recrutement se passe bien</div></div>
+        <div class="az-option" data-q="2" data-v="Pas de recrutement"><div class="az-option-dot"></div><div class="az-option-text">Nous ne recrutons pas en ce moment</div></div>
       </div>
     </div>
 
@@ -231,9 +161,9 @@
       <div class="az-step-label">Question 4 sur 8</div>
       <div class="az-question">Vos équipes parlent-elles de vos engagements de la même façon que vous ?</div>
       <div class="az-options">
-        <div class="az-option" data-q="3" data-v="yes"><div class="az-option-dot"></div><div class="az-option-text">Oui, le discours est partagé et cohérent</div></div>
-        <div class="az-option" data-q="3" data-v="no"><div class="az-option-dot"></div><div class="az-option-text">Non, chacun a sa version</div></div>
-        <div class="az-option" data-q="3" data-v="dontknow"><div class="az-option-dot"></div><div class="az-option-text">Je n'en suis pas certain·e</div></div>
+        <div class="az-option" data-q="3" data-v="Oui discours cohérent"><div class="az-option-dot"></div><div class="az-option-text">Oui, le discours est partagé et cohérent</div></div>
+        <div class="az-option" data-q="3" data-v="Non chacun sa version"><div class="az-option-dot"></div><div class="az-option-text">Non, chacun a sa version</div></div>
+        <div class="az-option" data-q="3" data-v="Pas certain"><div class="az-option-dot"></div><div class="az-option-text">Je n'en suis pas certain·e</div></div>
       </div>
     </div>
 
@@ -241,9 +171,9 @@
       <div class="az-step-label">Question 5 sur 8</div>
       <div class="az-question">Vos clients ou partenaires comprennent-ils clairement ce qui vous différencie ?</div>
       <div class="az-options">
-        <div class="az-option" data-q="4" data-v="yes"><div class="az-option-dot"></div><div class="az-option-text">Oui, notre différenciation est bien perçue</div></div>
-        <div class="az-option" data-q="4" data-v="no"><div class="az-option-dot"></div><div class="az-option-text">Non, nous avons du mal à nous démarquer</div></div>
-        <div class="az-option" data-q="4" data-v="dontknow"><div class="az-option-dot"></div><div class="az-option-text">Je ne sais pas vraiment comment nous sommes perçus</div></div>
+        <div class="az-option" data-q="4" data-v="Oui différenciation perçue"><div class="az-option-dot"></div><div class="az-option-text">Oui, notre différenciation est bien perçue</div></div>
+        <div class="az-option" data-q="4" data-v="Non du mal à se démarquer"><div class="az-option-dot"></div><div class="az-option-text">Non, nous avons du mal à nous démarquer</div></div>
+        <div class="az-option" data-q="4" data-v="Ne sait pas comment perçu"><div class="az-option-dot"></div><div class="az-option-text">Je ne sais pas vraiment comment nous sommes perçus</div></div>
       </div>
     </div>
 
@@ -251,9 +181,9 @@
       <div class="az-step-label">Question 6 sur 8</div>
       <div class="az-question">Avez-vous déjà formalisé une stratégie de communication — interne, externe ou marque employeur ?</div>
       <div class="az-options">
-        <div class="az-option" data-q="5" data-v="yes"><div class="az-option-dot"></div><div class="az-option-text">Oui, nous avons un cadre défini</div></div>
-        <div class="az-option" data-q="5" data-v="partial"><div class="az-option-dot"></div><div class="az-option-text">Partiellement — certains éléments existent mais ce n'est pas formalisé</div></div>
-        <div class="az-option" data-q="5" data-v="no"><div class="az-option-dot"></div><div class="az-option-text">Non, nous n'avons rien de structuré</div></div>
+        <div class="az-option" data-q="5" data-v="Oui cadre défini"><div class="az-option-dot"></div><div class="az-option-text">Oui, nous avons un cadre défini</div></div>
+        <div class="az-option" data-q="5" data-v="Partiellement"><div class="az-option-dot"></div><div class="az-option-text">Partiellement — certains éléments existent mais ce n'est pas formalisé</div></div>
+        <div class="az-option" data-q="5" data-v="Non rien de structuré"><div class="az-option-dot"></div><div class="az-option-text">Non, nous n'avons rien de structuré</div></div>
       </div>
     </div>
 
@@ -261,9 +191,9 @@
       <div class="az-step-label">Question 7 sur 8</div>
       <div class="az-question">Combien de personnes travaillent dans votre structure ?</div>
       <div class="az-options">
-        <div class="az-option" data-q="6" data-v="small"><div class="az-option-dot"></div><div class="az-option-text">Moins de 10 personnes</div></div>
-        <div class="az-option" data-q="6" data-v="mid"><div class="az-option-dot"></div><div class="az-option-text">Entre 10 et 50 personnes</div></div>
-        <div class="az-option" data-q="6" data-v="large"><div class="az-option-dot"></div><div class="az-option-text">Plus de 50 personnes</div></div>
+        <div class="az-option" data-q="6" data-v="Moins de 10"><div class="az-option-dot"></div><div class="az-option-text">Moins de 10 personnes</div></div>
+        <div class="az-option" data-q="6" data-v="10 à 50"><div class="az-option-dot"></div><div class="az-option-text">Entre 10 et 50 personnes</div></div>
+        <div class="az-option" data-q="6" data-v="Plus de 50"><div class="az-option-dot"></div><div class="az-option-text">Plus de 50 personnes</div></div>
       </div>
     </div>
 
@@ -271,10 +201,10 @@
       <div class="az-step-label">Question 8 sur 8</div>
       <div class="az-question">Quel est votre enjeu principal en ce moment ?</div>
       <div class="az-options">
-        <div class="az-option" data-q="7" data-v="recruit"><div class="az-option-dot"></div><div class="az-option-text">Recruter et fidéliser les bons profils</div></div>
-        <div class="az-option" data-q="7" data-v="image"><div class="az-option-dot"></div><div class="az-option-text">Renforcer notre image et notre crédibilité</div></div>
-        <div class="az-option" data-q="7" data-v="diff"><div class="az-option-dot"></div><div class="az-option-text">Mieux nous différencier auprès de nos clients</div></div>
-        <div class="az-option" data-q="7" data-v="all"><div class="az-option-dot"></div><div class="az-option-text">Tout cela à la fois — la communication est un enjeu global</div></div>
+        <div class="az-option" data-q="7" data-v="Recrutement et fidélisation"><div class="az-option-dot"></div><div class="az-option-text">Recruter et fidéliser les bons profils</div></div>
+        <div class="az-option" data-q="7" data-v="Image et crédibilité"><div class="az-option-dot"></div><div class="az-option-text">Renforcer notre image et notre crédibilité</div></div>
+        <div class="az-option" data-q="7" data-v="Différenciation clients"><div class="az-option-dot"></div><div class="az-option-text">Mieux nous différencier auprès de nos clients</div></div>
+        <div class="az-option" data-q="7" data-v="Tout à la fois"><div class="az-option-dot"></div><div class="az-option-text">Tout cela à la fois — la communication est un enjeu global</div></div>
       </div>
     </div>
 
@@ -314,6 +244,7 @@
 
 <script>
   const TJM = 400, COEFF = 1.15, MIN = 550;
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwe1VSkVVvPHI_uGjRgCvGRCPndj6kh08-V9h-ARAEugI-_eUooB4Smkd5ylnqvLPgp/exec';
   let answers = {}, currentStep = 0;
   const totalSteps = 8;
 
@@ -322,12 +253,12 @@
   function deduce() {
     const a = answers;
     let perimetres = [], profondeur = 'desk', joursMin = 1.5, joursMax = 2;
-    const internalIssue = a[1]==='no'||a[1]==='dontknow';
-    const teamIssue = a[3]==='no'||a[3]==='dontknow';
-    const externalIssue = a[4]==='no'||a[4]==='dontknow';
-    const recruitIssue = a[2]==='yes'||a[7]==='recruit';
-    const imageIssue = a[7]==='image'||a[7]==='diff';
-    const allIssue = a[7]==='all';
+    const internalIssue = a[1]==='Pas vraiment'||a[1]==='Je ne sais pas';
+    const teamIssue = a[3]==='Non chacun sa version'||a[3]==='Pas certain';
+    const externalIssue = a[4]==='Non du mal à se démarquer'||a[4]==='Ne sait pas comment perçu';
+    const recruitIssue = a[2]==='Oui difficile'||a[7]==='Recrutement et fidélisation';
+    const imageIssue = a[7]==='Image et crédibilité'||a[7]==='Différenciation clients';
+    const allIssue = a[7]==='Tout à la fois';
     const size = a[6];
     if (recruitIssue||(internalIssue&&teamIssue)) perimetres.push('Marque employeur');
     if (externalIssue||imageIssue) perimetres.push('Communication externe');
@@ -335,11 +266,11 @@
     if (allIssue||perimetres.length>=3) perimetres = ['360°'];
     if (perimetres.length===0) perimetres.push('Communication externe');
     const is360=perimetres.includes('360°'), isEmp=perimetres.includes('Marque employeur'), isMulti=perimetres.length>=2;
-    if (a[5]==='no'||a[5]==='partial') profondeur='entretiens';
-    if (is360||(isMulti&&size!=='small')) profondeur='entretiens';
-    if (size==='large'&&(is360||isEmp)) profondeur='questionnaires';
-    if (size==='small') { if(profondeur==='desk'){joursMin=1.5;joursMax=2;}else{joursMin=2.5;joursMax=3.5;} }
-    else if (size==='mid') { if(profondeur==='desk'){joursMin=2;joursMax=3;}else if(profondeur==='entretiens'){joursMin=3;joursMax=4.5;}else{joursMin=4.5;joursMax=6.5;} }
+    if (a[5]==='Non rien de structuré'||a[5]==='Partiellement') profondeur='entretiens';
+    if (is360||(isMulti&&size!=='Moins de 10')) profondeur='entretiens';
+    if (size==='Plus de 50'&&(is360||isEmp)) profondeur='questionnaires';
+    if (size==='Moins de 10') { if(profondeur==='desk'){joursMin=1.5;joursMax=2;}else{joursMin=2.5;joursMax=3.5;} }
+    else if (size==='10 à 50') { if(profondeur==='desk'){joursMin=2;joursMax=3;}else if(profondeur==='entretiens'){joursMin=3;joursMax=4.5;}else{joursMin=4.5;joursMax=6.5;} }
     else { if(profondeur==='entretiens'){joursMin=4;joursMax=6;}else{joursMin=6;joursMax=8;} }
     const profondeurLabel = {desk:'Analyse de vos supports existants',entretiens:'Analyse + échanges avec vous et vos équipes clés',questionnaires:'Analyse complète avec consultation interne'}[profondeur];
     const livrables = ['Diagnostic clair de votre situation actuelle','Identification des vrais blocages et points forts sous-exploités','Recommandations concrètes et actionnables','Base solide pour décider de la suite'];
@@ -348,12 +279,38 @@
     return { perimetres, profondeurLabel, joursMin, joursMax, pMin: calcPrice(joursMin), pMax: calcPrice(joursMax), livrables };
   }
 
+  function sendToSheets(r) {
+    const a = answers;
+    const data = {
+      anciennete: a[0],
+      comInterne: a[1],
+      recrutement: a[2],
+      equipesAlignees: a[3],
+      differenciation: a[4],
+      strategie: a[5],
+      taille: a[6],
+      enjeu: a[7],
+      perimetre: r.perimetres.join(' + '),
+      profondeur: r.profondeurLabel,
+      prixMin: r.pMin,
+      prixMax: r.pMax,
+      duree: r.joursMin + ' à ' + r.joursMax + ' jours'
+    };
+    fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).catch(err => console.log('Tracking error:', err));
+  }
+
   function showResult() {
     document.querySelectorAll('.az-step').forEach(s => s.classList.remove('active'));
     document.querySelector('.az-nav').style.display = 'none';
     document.getElementById('az-result').classList.add('active');
     document.getElementById('progress').style.width = '100%';
     const r = deduce();
+    sendToSheets(r);
     document.getElementById('res-price').textContent = r.pMin===r.pMax ? r.pMin+' €' : r.pMin+' – '+r.pMax+' €';
     document.getElementById('res-duration').textContent = 'Durée estimée : '+r.joursMin+' à '+r.joursMax+' jours';
     document.getElementById('res-perimetre').textContent = r.perimetres.join(' + ');
@@ -362,7 +319,7 @@
     const tagsEl = document.getElementById('res-tags');
     tagsEl.innerHTML = '';
     r.perimetres.forEach(p => { const t=document.createElement('span'); t.className='az-tag'; t.textContent=p; tagsEl.appendChild(t); });
-    const tSize=document.createElement('span'); tSize.className='az-tag az-tag-green'; tSize.textContent={small:'< 10 personnes',mid:'10–50 personnes',large:'> 50 personnes'}[answers[6]]; tagsEl.appendChild(tSize);
+    const tSize=document.createElement('span'); tSize.className='az-tag az-tag-green'; tSize.textContent=answers[6]; tagsEl.appendChild(tSize);
     const livEl=document.getElementById('res-livrables'); livEl.innerHTML='';
     r.livrables.forEach(l => { const row=document.createElement('div'); row.className='az-detail-row'; row.innerHTML=`<span style="color:var(--az-dark)">→ ${l}</span>`; livEl.appendChild(row); });
   }
